@@ -32,8 +32,10 @@ export default function Home(props) {
 							</Link>
 							<p>
 								You are saving {projection.savedAmt} every month for{' '}
-								{projection.years} years
+								{projection.years} years and in {projection.years} you will have{' '}
+								{projection.savedAmt * 12 * projection.years}
 							</p>
+							<p>which is equal to ---- MXN</p>
 						</li>
 					);
 				})}
