@@ -78,6 +78,35 @@ export default function Show(props) {
 			) : (
 				<h1>Loading....</h1>
 			)}
+			<form
+				style={{ display: 'flex', flexDirection: 'column' }}
+				onSubmit={handleUpdate}
+			>
+				<label>
+					{' '}
+					Sending:{' '}
+					<input
+						type="text"
+						ref={sendAmtInput}
+						defaultValue={projection.sendAmt}
+					/>
+				</label>
+				<label>
+					{' '}
+					Saving:{' '}
+					<input
+						type="text"
+						ref={savedAmtInput}
+						defaultValue={projection.savedAmt}
+					/>
+				</label>
+				<label>
+					{' '}
+					Years:{' '}
+					<input type="text" ref={yearsInput} defaultValue={projection.years} />
+				</label>
+				<input type="submit" value="Update Projection" />
+			</form>
 		</div>
 	);
 }
