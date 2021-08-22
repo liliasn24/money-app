@@ -46,13 +46,20 @@ export default function Home(props) {
 	const handleChange = e => {
 		setProjection({ ...singleProjection, [e.target.id]: e.target.value });
 	};
+	const exchangeRate = 19.4;
+	const fee = 2.99;
+	const totalAmount = parseInt(singleProjection.sendAmt) + fee;
+	const totalSaved = parseInt(singleProjection.savedAmt);
+	const netSentUsd = parseInt(
+		singleProjection.sendAmt - singleProjection.savedAmt
+	);
+	const netSentMxn =
+		parseInt(singleProjection.sendAmt - singleProjection.savedAmt) *
+		exchangeRate;
 
-	const totalAmount = parseInt(singleProjection.sendAmt) + 15;
-
-	// const exchangeRate = 19.4;
 	// const parsedSendAmt = parseInt(sendAmt);
 	// const parsedSavedAmt = parseInt(savedAmt);
-	// const fee = 2.99;
+
 	// const interest = 0.07;
 	//
 	// const totalYouPay = () => {
@@ -99,7 +106,13 @@ export default function Home(props) {
 				<input className="position" type="submit" value="Submit" />
 			</form>
 			<div>
-				<h1>Total amount: {totalAmount}</h1>
+				<h2>You Pay: {totalAmount}</h2>
+				<h4>Fee: {fee}</h4>
+				<h2>You want to save: {totalSaved}</h2>
+				<h2>
+					Recipient: {netSentUsd} USD or {netSentMxn} MXN
+				</h2>
+				<h4>Exchange Rate: {exchangeRate}</h4>
 			</div>
 			<ul>
 				{projections.map(projection => {
