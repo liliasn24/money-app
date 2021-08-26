@@ -44,6 +44,8 @@ export default function Show(props) {
 		})();
 	}, []);
 
+	console.log(projection);
+
 	const handleDelete = async e => {
 		try {
 			const response = await fetch(

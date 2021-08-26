@@ -25,7 +25,7 @@ export default function Contact(props) {
 				<div className="box">
 					<i className="fas fa-hotel fa-3x"></i>
 					<h3>Location</h3>
-					<p>50 Main st, Boston MA</p>
+					<p>50 Broadway st, New York, NY</p>
 				</div>
 				<div className="box">
 					<i className="fas fa-phone fa-3x"></i>
