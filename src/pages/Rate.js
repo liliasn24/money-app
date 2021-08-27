@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Rate(props) {
-	const query =
-		'https://v6.exchangerate-api.com/v6/c2a5fcd1ca0cc830bff660ba/latest/USD';
+	const query = '';
 
 	const [exchangeRate, updateExchangeRate] = useState({});
 	useEffect(() => {

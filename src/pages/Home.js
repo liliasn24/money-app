@@ -66,11 +66,11 @@ export default function Home(props) {
 	// const interest = 0.07;
 
 	return (
-		<div className="container">
+		<div className="container" class=".bg-secondary">
 			<h1>Savings Projection</h1>
-			<div className="container">
+			<div className="container" className="border">
 				<form onSubmit={handleSubmit}>
-					<div>
+					<div class="mb-3">
 						<label name="name">Send</label>
 						<input
 							type="text"
@@ -79,7 +79,7 @@ export default function Home(props) {
 							onChange={handleChange}
 						/>
 					</div>
-					<div>
+					<div class="mb-3">
 						<label name="savedAmt">Save</label>
 						<input
 							type="text"
@@ -88,7 +88,7 @@ export default function Home(props) {
 							onChange={handleChange}
 						/>
 					</div>
-					<div>
+					<div class="mb-3">
 						<label name="years">Years</label>
 						<input
 							type="text"
