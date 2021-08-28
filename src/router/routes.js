@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../pages/App';
+import Español from '../pages/Español';
 import About from '../pages/About';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
@@ -21,8 +21,8 @@ const routes = [
 		path: '/about'
 	},
 	{
-		Component: App,
-		key: 'App',
+		Component: Español,
+		key: 'Español',
 		path: '/'
 	}
 ];

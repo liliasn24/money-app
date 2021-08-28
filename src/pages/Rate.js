@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Rate(props) {
-	const query = 'test';
+	const query = process.env.API;
 
 	const [exchangeRate, updateExchangeRate] = useState({});
 	useEffect(() => {

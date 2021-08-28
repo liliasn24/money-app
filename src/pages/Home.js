@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Rate from './Rate';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { FaInstagramSquare } from 'react-icons/fa';
+import { FaTwitterSquare } from 'react-icons/fa';
 
 export default function Home(props) {
 	const [projections, setProjections] = useState([]); // Projection state
@@ -46,8 +49,6 @@ export default function Home(props) {
 		}
 	};
 
-	console.log(rate);
-
 	const handleChange = e => {
 		setProjection({ ...singleProjection, [e.target.id]: e.target.value });
 	};
@@ -63,14 +64,19 @@ export default function Home(props) {
 	const totalSavedUsd = parseInt(singleProjection.years) * netSentUsd;
 	const totalSavedMxn = totalSavedUsd * rate;
 
-	// const interest = 0.07;
+	// const interest = 0.03;
 
 	return (
-		<div className="container" class=".bg-secondary">
+		<div className="HomePage">
 			<h1>Savings Projection</h1>
-			<div className="container" className="border">
+			<div className="footer">
+				<FaInstagramSquare />
+				<FaFacebookSquare />
+				<FaTwitterSquare />
+			</div>
+			<div className="form">
 				<form onSubmit={handleSubmit}>
-					<div class="mb-3">
+					<div className="one">
 						<label name="name">Send</label>
 						<input
 							type="text"
@@ -79,7 +85,7 @@ export default function Home(props) {
 							onChange={handleChange}
 						/>
 					</div>
-					<div class="mb-3">
+					<div className="one">
 						<label name="savedAmt">Save</label>
 						<input
 							type="text"
@@ -88,7 +94,7 @@ export default function Home(props) {
 							onChange={handleChange}
 						/>
 					</div>
-					<div class="mb-3">
+					<div className="one">
 						<label name="years">Years</label>
 						<input
 							type="text"
@@ -98,31 +104,30 @@ export default function Home(props) {
 							onChange={handleChange}
 						/>
 					</div>
-					<input className="position" type="submit" value="Submit" />
+					<input className="btn" type="submit" value="Submit" />
 				</form>
 			</div>
-			<div>
-				<h3>You Pay: {totalAmount}</h3>
+			<div className="view">
+				<h4>You Pay: {totalAmount}</h4>
 				<h6>Fee: {fee}</h6>
-				<h3>You want to save: {totalSaved}</h3>
-				<h3>
-					Recipient: {netSentUsd} USD or {netSentMxn} MXN
-				</h3>
+				<h6>Rate:</h6>
 				<Rate rate={rate => setRate(rate)} />
+				<h4>You want to save: {totalSaved}</h4>
+				<h4>
+					Recipient: {netSentUsd} USD or {netSentMxn} MXN
+				</h4>
 			</div>
-			<div>
+			<div className="grid">
 				<ul>
 					{projections.map(projection => {
 						return (
-							<li key={projection._id}>
-								<Link to={`/${projection._id}`}>
-									<h3>You are sending {projection.sendAmt} USD</h3>
+							<li className="text" key={projection._id}>
+								<Link className="text" to={`/${projection._id}`}>
 									<p>
-										You are saving {projection.savedAmt} every month for{' '}
-										{projection.years} years and in {projection.years} years you
-										will have {projection.savedAmt * 12 * projection.years} USD
+										If you save {projection.savedAmt} every month for{' '}
+										{projection.years} years, you will have{' '}
+										{projection.savedAmt * 12 * projection.years} USD
 									</p>
-
 									<p>
 										which is equal to{' '}
 										{projection.savedAmt * 12 * projection.years * rate} MXN
@@ -133,7 +138,6 @@ export default function Home(props) {
 					})}
 				</ul>
 			</div>
-			<p>Disclosures and important details</p>
 		</div>
 	);
 }

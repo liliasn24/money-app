@@ -1,28 +1,175 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
 @import "grid";
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 body {
-  font-size: 16px;
+  background: #616161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .NavBar {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: #f0f0f0;
+  height: 10vh;
+  background: #616161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  a:link, a:visited {
+    color: black!important;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
 
+// ============================================== HOME CSS ================================================
 .HomePage {
+  height: 100vh;
 
+  font-family: 'Lora', serif;
+
+  h1{
+    color: black;
+  }
+
+  ul {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-gap: 8rem;
+      text-align: left;
+      align-items: left;
+      float: left;
+    }
+
+    li {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.4rem;
+    float: left;
+    }
+
+    ul li {
+ background: #9bc5c3;  /* fallback for old browsers */
+ margin: 5px;
+ border: solid grey;
+ border-radius: 2%;
 }
 
-.AboutPage {
+a:link, a:visited {
+  color: black!important;
+  text-decoration: none;
+}
+
+.form{
+  width:340px;
+  height:300px;
+  background:#e6e6e6;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(25vh - 220px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Lora', serif;
+  position:relative;
+  float:left;
+
+  .btn{
+  float:right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  font-family:'Lora', serif;
+  border:2px solid #78788c;
+  background:0;
+  color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s
+    }
+  }
+
+.view{
+  width:370px;
+  height:300px;
+  background:#e6e6e6;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(25vh - 220px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Lora', serif;
+  position:relative;
+  }
+}
+
+
+
+// ====================================================END OF HOME CSS =================================
+
+
+.ShowPage {
+  width:500px;
+  height:330px;
+  background:#e6e6e6;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(35vh - 220px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Lora', serif;
+  position:relative;
+  align-items: center;
+  text-align: center;
+
+
+  form .btn{
+  float:right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  font-family:'Lora', serif;
+  border:2px solid #78788c;
+  background:0;
+  color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s
+    }
+
 
 }
 
 .ContactPage{
 
+  .form{
+  width:500px;
+  height:330px;
+  background:#e6e6e6;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(25vh - 220px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Lora', serif;
+  position:relative;
+  align-items: center;
+  text-align: center;
+}
+  form .btn{
+  float:right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  font-family:'Lora', serif;
+  border:2px solid #78788c;
+  background:0;
+  color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s
+    }
 }
 
 .AppPage {

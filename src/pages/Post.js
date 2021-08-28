@@ -44,8 +44,6 @@ export default function Show(props) {
 		})();
 	}, []);
 
-	console.log(projection);
-
 	const handleDelete = async e => {
 		try {
 			const response = await fetch(
@@ -68,14 +66,7 @@ export default function Show(props) {
 		<div className="ShowPage">
 			{Object.keys(projection).length ? (
 				<>
-					<h3>You are sending {projection.sendAmt} USD</h3>
-					<p>
-						You are saving {projection.savedAmt} every month for{' '}
-						{projection.years} years and in {projection.years} you will have{' '}
-						{projection.savedAmt * 12 * projection.years}
-					</p>
-					<p>which is equal to ---- MXN</p>
-					<button onClick={handleDelete}>Delete</button>
+					<h3>Update or delete your projection</h3>
 				</>
 			) : (
 				<h1>Loading....</h1>
@@ -107,7 +98,10 @@ export default function Show(props) {
 					Years:{' '}
 					<input type="text" ref={yearsInput} defaultValue={projection.years} />
 				</label>
-				<input type="submit" value="Update Projection" />
+				<input className="btn" type="submit" value="Update Projection" />
+				<button className="btn" onClick={handleDelete}>
+					Delete
+				</button>
 			</form>
 		</div>
 	);
