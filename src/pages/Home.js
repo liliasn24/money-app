@@ -66,7 +66,7 @@ export default function Home(props) {
 
 	return (
 		<div className="HomePage">
-			<div>
+			<div className="title">
 				<h1>Sendalo</h1>
 				<h3>Send, Save, Invest, Retire...</h3>
 				<Main />
@@ -76,6 +76,7 @@ export default function Home(props) {
 				See for yourself how much you can save in 10, 20 or the number of years
 				you wish to save
 			</h3>
+
 			<div className="main">
 				<div className="form">
 					<form onSubmit={handleSubmit}>
@@ -113,14 +114,17 @@ export default function Home(props) {
 				<div className="view">
 					<h4>You Pay: {totalAmount}</h4>
 					<h6>Fee: {fee}</h6>
-					<h6>Rate:</h6>
-					<Rate rate={rate => setRate(rate)} />
+					<h6>
+						Rate: <Rate rate={rate => setRate(rate)} />
+					</h6>
+
 					<h4>You want to save: {totalSaved}</h4>
 					<h4>
 						Recipient: {netSentUsd} USD or {netSentMxn} MXN
 					</h4>
 				</div>
 			</div>
+			<p>You can update or delete by clicking on each projection</p>
 			<div className="grid">
 				<ul>
 					{projections.map(projection => {
@@ -129,15 +133,15 @@ export default function Home(props) {
 								<Link className="text" to={`/${projection._id}`}>
 									<p>
 										If you save ${projection.savedAmt} every month for{' '}
-										{projection.years} years, you will have{' '}
+										<span className="underline">{projection.years}</span> years,
+										you will have{' '}
 										<span className="number">
-											{' '}
 											${projection.savedAmt * 12 * projection.years}
 										</span>{' '}
 										USD dollars{' '}
 									</p>
 									<p>
-										or the equivalent to todays{' '}
+										or the equivalent to today's{' '}
 										<span className="number">
 											${projection.savedAmt * 12 * projection.years * rate}
 										</span>{' '}

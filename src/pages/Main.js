@@ -13,10 +13,7 @@ export default function Main(props) {
 					</i>
 					<div>
 						<h3>Send</h3>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore,
-							iusto!
-						</p>
+						<p>Send money to family and friends. Great rates and low fees!</p>
 					</div>
 				</div>
 				<div>
@@ -26,8 +23,8 @@ export default function Main(props) {
 					<div>
 						<h3>Save</h3>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore,
-							iusto!
+							Save a percentage of the money you send for an emergency, rainy
+							day, or retirement.
 						</p>
 					</div>
 				</div>
@@ -38,8 +35,8 @@ export default function Main(props) {
 					<div>
 						<h3>Invest</h3>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore,
-							iusto!
+							Invest only when you are ready. See our financial education
+							section for more info.
 						</p>
 					</div>
 				</div>

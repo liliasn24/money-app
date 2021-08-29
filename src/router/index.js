@@ -22,7 +22,9 @@ const AppRouter = () => {
 					render={routerProps => <Show {...routerProps} />}
 				></Route>
 			</Switch>
-			<Footer />
+			<footer>
+				<Footer />
+			</footer>
 		</Router>
 	);
 };

@@ -22,6 +22,7 @@
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
+    font-family: 'Lora', serif;
   }
 }
 
@@ -31,24 +32,35 @@
   height: 100vh;
   font-family: 'Lora', serif;
 
+  .title{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   h1{
     color: black;
+    font-size: 50px;
   }
 
   ul {
       display: grid;
       grid-template-columns: 300px 300px 300px;
       grid-gap: 8rem;
+      justify-content: center;
       text-align: left;
-      align-items: left;
-      float: left;
+
+      // float: left;
     }
 
     li {
     text-align: left;
     font-weight: bold;
     font-size: 1.4rem;
-    float: left;
+    text-align: left;
+
+
+    // float: left;
     }
 
     ul li {
@@ -56,6 +68,14 @@
  margin: 5px;
  border: solid grey;
  border-radius: 2%;
+   text-align: left;
+}
+
+h3 {
+  text-align: center;
+}
+p {
+  text-align: center;
 }
 
 a:link, a:visited {
@@ -63,6 +83,9 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.underline {
+  text-decoration: underline;
+}
 .number{
   font-weight: bold;
   font-style: italic;
@@ -115,6 +138,8 @@ a:link, a:visited {
   font-family:'Lora', serif;
   // position:relative;
   }
+
+
 }
 
 
@@ -154,6 +179,7 @@ a:link, a:visited {
  // ========================================CONTACT PG ===========================
 .ContactPage{
 height: 100vh;
+font-family: 'Lora', serif;
 
   .form{
   width:500px;
@@ -189,6 +215,7 @@ background: #9bc5c3;
 color: white;
 display: grid;
 grid-template-columns: repeat(5, 1fr);
+font-family: 'Lora', serif;
 
 .box{
 
@@ -207,6 +234,15 @@ margin-left: 1rem;
     font-size: 50px;
   }
 }
+h6 {
+ font-weight: bold;
+ font-size: 20px;
+}
+.sendalo{
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+}
 }
 
 // ========================================MAIN / ICONS =======================================
@@ -221,13 +257,15 @@ h3 {
     padding-top: 15px;
 }
 
+
+
  i {
     background-color: #9bc5c3;
     color: #fff;
     padding: 1rem;
     border-radius: 50%;
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 45px;
 }
 .flex-items {
   display: flex;

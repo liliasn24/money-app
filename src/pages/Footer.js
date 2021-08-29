@@ -12,14 +12,17 @@ export default function Footer(props) {
 			</div>
 			<div className="box">
 				<h6>Phone Number</h6>
-				<p>(617) 555-5555</p>
+				<p>(212) 333-5555</p>
 			</div>
 			<div className="box">
 				<h6>Email Address</h6>
 				<p>sendalo@moneyapp.com</p>
 			</div>
 			<div className="box">
-				<p>Sendalo &copy; 2021, All RIghts Reserved</p>
+				<p>
+					<span className="sendalo">Sendalo</span> &copy; 2021, All RIghts
+					Reserved
+				</p>
 			</div>
 			<div className="social">
 				<div className="icon">
