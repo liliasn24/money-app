@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Rate from './Rate';
-import { FaFacebookSquare } from 'react-icons/fa';
-import { FaInstagramSquare } from 'react-icons/fa';
-import { FaTwitterSquare } from 'react-icons/fa';
 
 export default function Home(props) {
 	const [projections, setProjections] = useState([]); // Projection state
@@ -69,11 +66,6 @@ export default function Home(props) {
 	return (
 		<div className="HomePage">
 			<h1>Savings Projection</h1>
-			<div className="footer">
-				<FaInstagramSquare />
-				<FaFacebookSquare />
-				<FaTwitterSquare />
-			</div>
 			<div className="form">
 				<form onSubmit={handleSubmit}>
 					<div className="one">
