@@ -3,9 +3,9 @@
 @import "grid";
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-body {
-  background: #c72727;
-}
+// body {
+//   background: #c72727;
+// }
 
 .NavBar {
   display: flex;
@@ -27,6 +27,7 @@ body {
 
 // ============================================== HOME CSS ================================================
 .HomePage {
+  background: #F8F8FF;
   height: 100vh;
   font-family: 'Lora', serif;
 
@@ -62,6 +63,18 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.number{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 34px;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
 .form{
   width:340px;
   height:300px;
@@ -73,8 +86,8 @@ a:link, a:visited {
   max-width:calc(100vw - 40px);
   box-sizing:border-box;
   font-family:'Lora', serif;
-  position:relative;
-  float:left;
+  // position:relative;
+  // float:left;
 
   .btn{
   float:right;
@@ -100,16 +113,17 @@ a:link, a:visited {
   max-width:calc(100vw - 40px);
   box-sizing:border-box;
   font-family:'Lora', serif;
-  position:relative;
+  // position:relative;
   }
 }
 
 
 
-// ====================================================END OF HOME CSS =================================
+// =========================================SHOW PG =====================================
 
 
 .ShowPage {
+
   width:500px;
   height:330px;
   background:#e6e6e6;
@@ -137,8 +151,9 @@ a:link, a:visited {
   transition:all .3s
     }
 }
-
+ // ========================================CONTACT PG ===========================
 .ContactPage{
+height: 100vh;
 
   .form{
   width:500px;
@@ -146,7 +161,7 @@ a:link, a:visited {
   background:#e6e6e6;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
-  margin:calc(25vh - 220px) auto;
+  margin:calc(45vh - 220px) auto;
   padding:20px 30px;
   max-width:calc(100vw - 40px);
   box-sizing:border-box;
@@ -168,6 +183,7 @@ a:link, a:visited {
     }
 }
 
+// ======================================FOOTER ==============================================
 .Footer {
 background: #9bc5c3;
 color: white;
@@ -191,6 +207,38 @@ margin-left: 1rem;
     font-size: 50px;
   }
 }
+}
 
+// ========================================MAIN / ICONS =======================================
+.icons{
+background: #F8F8FF;
+ padding: 30px;
+
+h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+ i {
+    background-color: #9bc5c3;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.flex-items > div {
+  padding: 20px;
+}
 
 }

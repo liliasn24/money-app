@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Rate from './Rate';
+import Main from '../pages/Main';
 
 export default function Home(props) {
 	const [projections, setProjections] = useState([]); // Projection state
@@ -65,49 +66,60 @@ export default function Home(props) {
 
 	return (
 		<div className="HomePage">
-			<h1>Savings Projection</h1>
-			<div className="form">
-				<form onSubmit={handleSubmit}>
-					<div className="one">
-						<label name="name">Send</label>
-						<input
-							type="text"
-							id="sendAmt"
-							value={singleProjection.sendAmt}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="one">
-						<label name="savedAmt">Save</label>
-						<input
-							type="text"
-							id="savedAmt"
-							value={singleProjection.savedAmt}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="one">
-						<label name="years">Years</label>
-						<input
-							type="text"
-							id="years"
-							placeholder="Enter number of years"
-							value={singleProjection.years}
-							onChange={handleChange}
-						/>
-					</div>
-					<input className="btn" type="submit" value="Submit" />
-				</form>
+			<div>
+				<h1>Sendalo</h1>
+				<h3>Send, Save, Invest, Retire...</h3>
+				<Main />
 			</div>
-			<div className="view">
-				<h4>You Pay: {totalAmount}</h4>
-				<h6>Fee: {fee}</h6>
-				<h6>Rate:</h6>
-				<Rate rate={rate => setRate(rate)} />
-				<h4>You want to save: {totalSaved}</h4>
-				<h4>
-					Recipient: {netSentUsd} USD or {netSentMxn} MXN
-				</h4>
+
+			<h3>
+				See for yourself how much you can save in 10, 20 or the number of years
+				you wish to save
+			</h3>
+			<div className="main">
+				<div className="form">
+					<form onSubmit={handleSubmit}>
+						<div className="one">
+							<label name="name">Send</label>
+							<input
+								type="text"
+								id="sendAmt"
+								value={singleProjection.sendAmt}
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="one">
+							<label name="savedAmt">Save</label>
+							<input
+								type="text"
+								id="savedAmt"
+								value={singleProjection.savedAmt}
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="one">
+							<label name="years">Years</label>
+							<input
+								type="text"
+								id="years"
+								placeholder="Enter number of years"
+								value={singleProjection.years}
+								onChange={handleChange}
+							/>
+						</div>
+						<input className="btn" type="submit" value="Submit" />
+					</form>
+				</div>
+				<div className="view">
+					<h4>You Pay: {totalAmount}</h4>
+					<h6>Fee: {fee}</h6>
+					<h6>Rate:</h6>
+					<Rate rate={rate => setRate(rate)} />
+					<h4>You want to save: {totalSaved}</h4>
+					<h4>
+						Recipient: {netSentUsd} USD or {netSentMxn} MXN
+					</h4>
+				</div>
 			</div>
 			<div className="grid">
 				<ul>
@@ -116,13 +128,20 @@ export default function Home(props) {
 							<li className="text" key={projection._id}>
 								<Link className="text" to={`/${projection._id}`}>
 									<p>
-										If you save {projection.savedAmt} every month for{' '}
+										If you save ${projection.savedAmt} every month for{' '}
 										{projection.years} years, you will have{' '}
-										{projection.savedAmt * 12 * projection.years} USD
+										<span className="number">
+											{' '}
+											${projection.savedAmt * 12 * projection.years}
+										</span>{' '}
+										USD dollars{' '}
 									</p>
 									<p>
-										which is equal to{' '}
-										{projection.savedAmt * 12 * projection.years * rate} MXN
+										or the equivalent to todays{' '}
+										<span className="number">
+											${projection.savedAmt * 12 * projection.years * rate}
+										</span>{' '}
+										MXN pesos.
 									</p>
 								</Link>
 							</li>
