@@ -124,7 +124,6 @@ export default function Home(props) {
 					</h4>
 				</div>
 			</div>
-			<p>You can update or delete by clicking on each projection</p>
 			<div className="grid">
 				<ul>
 					{projections.map(projection => {

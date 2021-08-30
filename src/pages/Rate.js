@@ -16,7 +16,6 @@ export default function Rate(props) {
 			}
 		})();
 	}, []);
-	console.log('exchange', exchangeRate);
 	return (
 		<div className="App">
 			{exchangeRate.result == 'success'
