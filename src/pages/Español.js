@@ -22,7 +22,7 @@ export default function App(props) {
 					<input type="number" name="age" />
 				</div>
 				<div>
-					<label name="birthday">Cumpleaños</label>
+					<label name="birthday">Fecha de Nacimiento</label>
 					<input type="date" name="birthday" />
 				</div>
 				<div>
