@@ -24,7 +24,7 @@ export default function Main(props) {
 						<h3>Save</h3>
 						<p>
 							Save a percentage of the money you send for an emergency or
-							retirement and have accees to the funds from anywhere.
+							retirement and have accees to the funds anywhere.
 						</p>
 					</div>
 				</div>

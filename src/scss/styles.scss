@@ -49,6 +49,7 @@
       grid-gap: 8rem;
       justify-content: center;
       text-align: left;
+      align-items: left;
 
       // float: left;
     }
@@ -70,14 +71,15 @@
  text-align: left;
  width: 390px;
  align-items: left;
+ justify-content: left;
 }
 
 h3 {
   text-align: center;
 }
-p {
-  text-align: center;
-}
+// p {
+//   text-align: center;
+// }
 
 a:link, a:visited {
   color: black!important;

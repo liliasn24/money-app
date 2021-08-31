@@ -61,9 +61,9 @@ export default function Home(props) {
 		parseInt(singleProjection.sendAmt - singleProjection.savedAmt) * rate;
 	const totalSavedUsd = parseInt(singleProjection.years) * netSentUsd;
 	const totalSavedMxn = totalSavedUsd * rate;
-
+	// const mxn = projection.savedAmt * 12 * projection.years * rate
 	// const interest = 0.03;
-
+	console.log(rate);
 	return (
 		<div className="HomePage">
 			<div className="title">
@@ -137,10 +137,7 @@ export default function Home(props) {
 										<span className="number">
 											${projection.savedAmt * 12 * projection.years}
 										</span>{' '}
-										USD dollars{' '}
-									</p>
-									<p>
-										or the equivalent to today's{' '}
+										USD dollars or the equivalent to today's{' '}
 										<span className="number">
 											${projection.savedAmt * 12 * projection.years * rate}
 										</span>{' '}
