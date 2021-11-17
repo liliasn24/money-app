@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import Footer from '../pages/Footer';
+import Footer from '../components/Footer';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Show from '../pages/Post';
 import routes from './routes';
