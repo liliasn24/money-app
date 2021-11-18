@@ -81,11 +81,10 @@ eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 
   !*** ./node_modules/emailjs-com/es/index.js ***!
   \**********************************************/
 /*! exports provided: init, send, sendForm, default */
-/*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("/* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods/init/init */ \"./node_modules/emailjs-com/es/methods/init/init.js\");\n/* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods/send/send */ \"./node_modules/emailjs-com/es/methods/send/send.js\");\n/* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./methods/sendForm/sendForm */ \"./node_modules/emailjs-com/es/methods/sendForm/sendForm.js\");\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"a\"] = ({\n    init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__[/* init */ \"a\"],\n    send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__[/* send */ \"a\"],\n    sendForm: _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__[/* sendForm */ \"a\"],\n});\n\n\n//# sourceURL=webpack:///./node_modules/emailjs-com/es/index.js?");
+eval("/* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods/init/init */ \"./node_modules/emailjs-com/es/methods/init/init.js\");\n/* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods/send/send */ \"./node_modules/emailjs-com/es/methods/send/send.js\");\n/* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./methods/sendForm/sendForm */ \"./node_modules/emailjs-com/es/methods/sendForm/sendForm.js\");\n\n\n\n\n/* unused harmony default export */ var _unused_webpack_default_export = ({\n    init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__[/* init */ \"a\"],\n    send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__[/* send */ \"a\"],\n    sendForm: _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__[/* sendForm */ \"a\"],\n});\n\n\n//# sourceURL=webpack:///./node_modules/emailjs-com/es/index.js?");
 
 /***/ }),
 
