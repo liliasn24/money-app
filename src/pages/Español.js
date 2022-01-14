@@ -5,9 +5,11 @@ export default function App(props) {
 		<div className="Español">
 			<h1>Ayudanos a construir una mejor aplicación</h1>
 			<p>
+			 Que planea hacer cuando se retire?
 				Sendalo es una aplicacion para personas que mandan dinero a Mexico a sus
 				familiares. Imaginate poder ahorrar dinero para una emergencia de salud,
-				un evento desafortunado, o para tu retiro.
+				un evento desafortunado, o para tu retiro. Ahorra un porcentaje de lo que envias
+				a Mexico para tu yo del futuro. Te lo agradeceras.
 			</p>
 			<form className="form">
 				<div>
