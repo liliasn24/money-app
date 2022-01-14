@@ -4,6 +4,11 @@ export default function App(props) {
 	return (
 		<div className="Español">
 			<h1>Ayudanos a construir una mejor aplicación</h1>
+			<p>
+				Sendalo es una aplicacion para personas que mandan dinero a Mexico a sus
+				familiares. Imaginate poder ahorrar dinero para una emergencia de salud,
+				un evento desafortunado, o para tu retiro.
+			</p>
 			<form className="form">
 				<div>
 					<label name="Email">Correo electronico</label>
